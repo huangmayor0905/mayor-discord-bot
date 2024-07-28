@@ -65,10 +65,8 @@ async def load_extension():
 async def main():
     async with bot:
         await load_extension()
-        await bot.start(os.getenv("TOKEN"))
+        await bot.start(os.environ.get("TOKEN"))
 
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-# https://discord.com/oauth2/authorize?client_id=1211861121678581760&permissions=8&integration_type=0&scope=bot
